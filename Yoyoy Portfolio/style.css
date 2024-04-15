@@ -1,0 +1,162 @@
+body {
+  font-family: Verdana;
+  font-size: 20px;
+  margin: 0;
+  height: 3000px;
+  padding: 40px 0px;
+  z-index: 0;
+  background-color: rgb(27, 6, 46);
+  color: white;
+}
+
+.profile{
+  border: solid 1px white;
+}
+
+.main-profile{
+  border: solid 15px rgb(223, 223, 19);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  z-index: 1000;
+  background-color: rgb(27, 6, 46);
+}
+
+.name{
+  color: rgb(223, 223, 19);
+}
+
+.left-side {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+}
+
+.left-side .container-profile {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding:0px 3px;
+}
+
+.left-side .profile {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+p{
+  margin: 0;
+}
+
+.frame-profile {
+  display: contents;
+}
+.main-profile {
+  height: 515px;
+  width: 515px;
+  object-fit: cover;
+  border-radius: 100%;
+  position: fixed;
+  margin-top: 13px;
+}
+.right-side{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-side ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px
+}
+
+.right-side ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+
+.right-side ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: yellow;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.right-side ul li a:hover::after{
+  width: 100%;
+}
+
+@media(max-width: 1000px) and (min-width: 699px){
+  .main-profile {
+    visibility: hidden;
+  }
+}
+
+@media(max-width: 700px) {
+  .left-side {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+    justify-items: center;
+    padding: 0 10px;
+  }
+
+  .nav-bar{
+    height: 60px;
+  }
+
+  p{
+    padding: 0;
+  }
+
+  .frame-profile {
+    display: flex;
+    width: 100%;
+    height: 550px;
+    justify-content: center;
+  }
+
+  .main-profile {
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    margin-top: 35px;
+  }
+
+  .right-side-btn{
+    visibility: hidden;
+  }
+
+  .menu-btn{
+    width: 40px;
+    margin-right: 10px;
+    
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: row;
+    width: 280px;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+}
